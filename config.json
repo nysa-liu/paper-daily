@@ -1,0 +1,44 @@
+{
+    "arxiv": {
+        "categories": [
+            "cs.AI",
+            "cs.LG",
+            "cs.CL",
+            "cs.CV",
+            "stat.ML"
+        ],
+        "max_results": 100,
+        "api_url": "http://export.arxiv.org/api/query"
+    },
+    "openreview": {
+        "conference_ids": [
+            "ICLR.cc/2024",
+            "NeurIPS.cc/2024"
+        ],
+        "api_url": "https://api.openreview.net/notes"
+    },
+    "embedding": {
+        "model_name": "all-MiniLM-L6-v2",
+        "max_seq_length": 512,
+        "batch_size": 32
+    },
+    "analysis": {
+        "top_k": 10,
+        "similarity_threshold": 0.7,
+        "diversity_weight": 0.3
+    },
+    "database": {
+        "db_path": "data/db/papers.db",
+        "vector_index_path": "data/db/vector_index.faiss"
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "logs/paper_daily.log",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    },
+    "web": {
+        "host": "0.0.0.0",
+        "port": 8501,
+        "title": "Paper Daily - AI Research Tracker"
+    }
+}
